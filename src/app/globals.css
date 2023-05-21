@@ -1,0 +1,35 @@
+import React from 'react';
+import { Button } from '@material-tailwind/react';
+import { Icon } from '@material-ui/core';
+import DescriptionIcon from '@material-ui/icons/Description';
+
+function Header() {
+  const descriptionIconStyles = {
+    height: '40px',
+    width: '40px',
+    color: 'blue',
+  };
+
+  return (
+    <div className="sticky top-0 z-50 flex items-center px-4 py-2 shadow-md bg-white">
+      <Button
+        color="blue"
+        buttonType="outline"
+        rounded={true}
+        ripple="light"
+        className="hidden md:inline-flex"
+        rippleColor="blue"
+      >
+        <Icon>menu</Icon>
+      </Button>
+      <div style={{ marginLeft: '8px', paddingRight: '30px' }}>
+        <DescriptionIcon style={descriptionIconStyles} />
+      </div>
+      <h1 className="hidden md:inline-flex ml-2 text-gray-700 text-2xl">
+        Docs
+      </h1>
+    </div>
+  );
+}
+
+export default Header;
